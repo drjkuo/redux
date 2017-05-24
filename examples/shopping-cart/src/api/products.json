@@ -1,5 +1,5 @@
 [
-  {"id": 1, "title": "iPad 4 Mini", "price": 500.01, "inventory": 2},
-  {"id": 2, "title": "H&M T-Shirt White", "price": 10.99, "inventory": 10},
-  {"id": 3, "title": "Charli XCX - Sucker CD", "price": 19.99, "inventory": 5}
+  {"id": 1, "title": "VITALITY PACK", "price": 41.95, "inventory": 100, "imgurl": "http://s3.amazonaws.com/static.gnld.com/neolifeclub/us/en/kit/core/landingpage_m.png"},
+  {"id": 2, "title": "BREAKFAST PACK", "price": 119.85, "inventory": 100, "imgurl": "http://s3.amazonaws.com/static.gnld.com/neolifeclub/us/en/kit/optimal/landingpage_m.png"},
+  {"id": 3, "title": "SPORT PACK", "price": 189.80, "inventory": 100, "imgurl": "http://s3.amazonaws.com/static.gnld.com/neolifeclub/us/en/kit/sportpack/landingpage_m.png"}
 ]
