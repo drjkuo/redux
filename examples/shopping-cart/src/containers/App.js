@@ -1,14 +1,17 @@
 import React from 'react'
 import ProductsContainer from './ProductsContainer'
 import CartContainer from './CartContainer'
+import NavContainer from './NavContainer'
 
 const App = () => (
-  <div>
-    <h2>Shopping Cart Example</h2>
+
+  <div className="container">
+    {/* <h2>Shopping Cart Example</h2> */}
+    <NavContainer className="row"/>
     <hr/>
-    <ProductsContainer />
+    <ProductsContainer className="row"/>
     <hr/>
-    <CartContainer />
+    <CartContainer className="row"/>
   </div>
 )
 

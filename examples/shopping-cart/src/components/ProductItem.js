@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Product from './Product'
 
 const ProductItem = ({ product, onAddToCartClicked }) => (
-  <div style={{ marginBottom: 20 }}>
+  <div style={{ marginBottom: 20 }} className="panel-group col-md-4">
     <Product
       title={product.title}
       imgurl={product.imgurl}

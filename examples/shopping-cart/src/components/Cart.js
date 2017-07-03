@@ -19,13 +19,18 @@ const Cart  = ({ products, total, onCheckoutClicked }) => {
 
   return (
     <div>
-      <h3>Your Cart</h3>
-      <div>{nodes}</div>
-      <p>Total: &#36;{total}</p>
-      <button onClick={onCheckoutClicked}
-        disabled={hasProducts ? '' : 'disabled'}>
-        Checkout
-      </button>
+      <div className="text-center h1">Cart</div>
+      <div className="panel panel-default">
+        <div className="panel-heading">Cart details</div>
+        <div className="panel-body">
+          <div>{nodes}</div>
+          <p>Total: &#36;{total}</p>
+          <button onClick={onCheckoutClicked}
+            disabled={hasProducts ? '' : 'disabled'}>
+            Checkout
+          </button>
+        </div>
+      </div>
     </div>
   )
 }
