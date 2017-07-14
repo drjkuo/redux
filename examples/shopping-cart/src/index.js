@@ -24,6 +24,10 @@ const store = createStore(reducer, composeWithDevTools(
   // other store enhancers if any
 ));
 
+var username = 'memberusa';
+var session = '8b3d4fe7-4c4d-4403-8087-82f1cd324a98';
+localStorage.setItem('username', username);
+localStorage.setItem('session', session);
 
 store.dispatch(getAllProducts())
 

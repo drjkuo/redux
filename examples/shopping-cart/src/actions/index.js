@@ -41,15 +41,17 @@ export const checkout = products => (dispatch, getState) => {
   //   // Replace the line above with line below to rollback on failure:
   //   // dispatch({ type: types.CHECKOUT_FAILURE, cart })
   // })
-  // buyProducts: (payload, cb, timeout) => setTimeout(() => cb(), timeout || TIMEOUT)
+
   shop.buyProducts(products,
     function() {
       // const SESSION_URL = 'http://stage.api.neolife.com/v1/auth/session.json';
       const CART_URL = 'http://stage.api.neolife.com/v1/promote/update.json?';
       const url = CART_URL;
 
-      var username = 'memberusa';
-      var session = '8b3d4fe7-4c4d-4403-8087-82f1cd324a98';
+      // var username = 'memberusa';
+      // var session = '8b3d4fe7-4c4d-4403-8087-82f1cd324a98';
+      var username = localStorage.getItem('username');
+      var session = localStorage.getItem('session');
       var authEncoded = base64.encode(username + ':' + session);
       console.log('cart!!!!!', cart.quantityById);
 
@@ -79,6 +81,5 @@ export const checkout = products => (dispatch, getState) => {
         })
       })
     })
-
 
   }

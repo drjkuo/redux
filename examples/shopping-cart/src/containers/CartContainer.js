@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import { checkout } from '../actions'
 import { getTotal, getCartProducts } from '../reducers'
 import Cart from '../components/Cart'
+// import { instanceOf } from 'prop-types';
+// import { CookiesProvider, withCookies, Cookies } from 'react-cookie';
 
 const CartContainer = ({ products, total, checkout }) => (
   <Cart
