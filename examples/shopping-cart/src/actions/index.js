@@ -27,6 +27,18 @@ export const addToCart = productId => (dispatch, getState) => {
   }
 }
 
+const delFromCartUnsafe = productId => ({
+  type: types.DEL_FROM_CART,
+  productId
+})
+
+export const delFromCart = productId => (dispatch, getState) => {
+  if (getState().cart.quantityById[productId] > 0) {
+    dispatch(delFromCartUnsafe(productId))
+  }
+}
+
+
 export const checkout = products => (dispatch, getState) => {
   const { cart } = getState()
 
@@ -70,6 +82,12 @@ export const checkout = products => (dispatch, getState) => {
       //   "Quantity": 13,
       //   "Autoship": true
       // }];
+      // axios.post(url,
+      //   querystring.stringify({ action: 'append', items: JSON.stringify(items), authorization: authEncoded})
+      // );
+      // axios.post(url,
+      //   querystring.stringify({ action: 'append', items: JSON.stringify(items), authorization: authEncoded})
+      // );
       return axios.post(url,
         querystring.stringify({ action: 'append', items: JSON.stringify(items), authorization: authEncoded})
       )
