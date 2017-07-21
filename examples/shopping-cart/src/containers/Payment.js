@@ -1,7 +1,8 @@
 import React from 'react'
+import styles from '../css/payment.css';
 
 const Payment = () => (
-  <div className="container wrapper">
+  <div className="container wrapper styles">
           <div className="row cart-head">
             <div className="container">
               <div className="row">
