@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Product from './Product'
+import { Link } from 'react-router-dom'
 
 const Cart  = ({ products, total, onCheckoutClicked }) => {
   const hasProducts = products.length > 0
@@ -30,6 +31,7 @@ const Cart  = ({ products, total, onCheckoutClicked }) => {
             Checkout
           </button>
         </div>
+        <li><Link to='/payment'>Payment</Link></li>
       </div>
     </div>
   )
