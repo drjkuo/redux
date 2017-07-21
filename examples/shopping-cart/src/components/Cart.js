@@ -26,21 +26,27 @@ const Cart  = ({ products, total, onCheckoutClicked }) => {
         <div className="panel-body">
           <div>{nodes}</div>
           <p>Total: &#36;{total}</p>
-          <button onClick={onCheckoutClicked}
+          {/* <button onClick={onCheckoutClicked}
             disabled={hasProducts ? '' : 'disabled'}>
             Checkout
-          </button>
+          </button> */}
+
+          <Link
+            className="btn btn-default"
+            role="button"
+            to="/payment"
+            onClick={onCheckoutClicked}>Checkout</Link>
+          </div>
+          {/* <li><Link to='/payment'>Payment</Link></li> */}
         </div>
-        <li><Link to='/payment'>Payment</Link></li>
       </div>
-    </div>
-  )
-}
+    )
+  }
 
-Cart.propTypes = {
-  products: PropTypes.array,
-  total: PropTypes.string,
-  onCheckoutClicked: PropTypes.func
-}
+  Cart.propTypes = {
+    products: PropTypes.array,
+    total: PropTypes.string,
+    onCheckoutClicked: PropTypes.func
+  }
 
-export default Cart
+  export default Cart
