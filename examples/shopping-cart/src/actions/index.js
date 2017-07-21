@@ -60,11 +60,15 @@ export const checkout = products => (dispatch, getState) => {
       const CART_URL = 'http://stage.api.neolife.com/v1/promote/update.json?';
       const url = CART_URL;
 
-      // var username = 'memberusa';
+      var username = 'memberusa';
+      // var session = '540e6baf-8b2c-4559-95a1-bb1b444d7b3b';
+      // var session = '7af4d72e-33b1-409f-bd1f-fbb781896ac4';
+      var session = '149b6050-e054-45ba-a5f3-bbdce41eff25';
       // var session = '8b3d4fe7-4c4d-4403-8087-82f1cd324a98';
-      var username = localStorage.getItem('username');
-      var session = localStorage.getItem('session');
+      // var username = localStorage.getItem('username');
+      // var session = localStorage.getItem('session');
       var authEncoded = base64.encode(username + ':' + session);
+      // var authEncoded = base64.encode(session);
       console.log('cart!!!!!', cart.quantityById);
 
       var items = [];
@@ -88,6 +92,7 @@ export const checkout = products => (dispatch, getState) => {
       // axios.post(url,
       //   querystring.stringify({ action: 'append', items: JSON.stringify(items), authorization: authEncoded})
       // );
+
       return axios.post(url,
         querystring.stringify({ action: 'append', items: JSON.stringify(items), authorization: authEncoded})
       )

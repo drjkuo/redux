@@ -1,5 +1,5 @@
 [
-  {"id": 2920, "title": "VITALITY PACK", "price": 41.95, "inventory": 100, "imgurl": "http://s3.amazonaws.com/static.gnld.com/neolifeclub/us/en/kit/core/landingpage_m.png"},
-  {"id": 8100, "title": "BREAKFAST PACK", "price": 119.85, "inventory": 100, "imgurl": "http://s3.amazonaws.com/static.gnld.com/neolifeclub/us/en/kit/optimal/landingpage_m.png"},
-  {"id": 8098, "title": "SPORT PACK", "price": 189.80, "inventory": 100, "imgurl": "http://s3.amazonaws.com/static.gnld.com/neolifeclub/us/en/kit/sportpack/landingpage_m.png"}
+  {"id": "2920", "title": "VITALITY PACK", "price": 41.95, "inventory": 100, "imgurl": "http://s3.amazonaws.com/static.gnld.com/neolifeclub/us/en/kit/core/landingpage_m.png"},
+  {"id": "8100", "title": "BREAKFAST PACK", "price": 119.85, "inventory": 100, "imgurl": "http://s3.amazonaws.com/static.gnld.com/neolifeclub/us/en/kit/optimal/landingpage_m.png"},
+  {"id": "8098", "title": "SPORT PACK", "price": 189.80, "inventory": 100, "imgurl": "http://s3.amazonaws.com/static.gnld.com/neolifeclub/us/en/kit/sportpack/landingpage_m.png"}
 ]
