@@ -20,11 +20,11 @@ export default class ReviewOrder extends React.Component {
     //     />
     //   )
     // );
-    this.componentWillMount=this.componentWillMount.bind(this, this.state.nodes);
+    // this.componentWillMount=this.componentWillMount.bind(this, this.state.nodes);
     // this.onFormSubmit=this.onFormSubmit.bind(this);
   };
 
-  componentWillMount (products) {
+  componentDidMount (products) {
     // var self = this;
     var CART_URL = 'http://stage.api.neolife.com/v1/promote/cart.json?';
     var session = '149b6050-e054-45ba-a5f3-bbdce41eff25';
@@ -41,11 +41,6 @@ export default class ReviewOrder extends React.Component {
       console.log('self cart', cartItems);
       const tmp = cartItems.map (product =>
         <Product
-          // var tmp = {};
-          // tmp.title = obj.Title;
-          // tmp.price = obj.Price;
-          // tmp.quantity = obj.TodaysQuantity;
-          // tmp.id = obj.SKU;
           title={product.Title}
           price={parseInt(product.Price.replace( /^\D+/g, ''), 10)}
           quantity={parseInt(product.TodaysQuantity, 10)}
@@ -55,7 +50,7 @@ export default class ReviewOrder extends React.Component {
       // // self.state.nodes = cartItems.map (product =>
       this.setState({nodes: tmp});
       this.setState({orderTotal: response.data.TotalRetail});
-      console.log('self nodes', this.state.nodes);
+      console.log('self price', this.state.orderTotal);
       // console.log(response.status);
       // console.log(response.statusText);
       // console.log(response.headers);
